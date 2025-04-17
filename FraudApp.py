@@ -41,12 +41,11 @@ top_20_features = [
 
 # === APP UI ===
 st.set_page_config(page_title="ClaimShield", layout="wide")
-st.title("🚨 ClaimShield – Auto Insurance Fraud Predictor")
+st.title("CS.png" "Auto Insurance Fraud Predictor")
 st.markdown("Enter claim details to receive a **fraud prediction**.")
 
 # === INPUT FORM IN 3 COLUMNS ===
 with st.form("fraud_form"):
-    st.markdown("### ✍️ Input Claim Details")
     col1, col2, col3 = st.columns(3)
     user_input = []
 
@@ -76,13 +75,13 @@ if submitted:
     if risk_score <= 40:
         st.success(f"Risk Score: {risk_score}/100 — ✅ Low Risk – Recommend Claim Payout")
     elif risk_score <= 70:
-        st.success(f"Risk Score: {risk_score}/100 — ✅ Medium Risk – Request Supporting Docs")
+        st.success(f"Risk Score: {risk_score}/100 — ⚠️ Medium Risk – Request Supporting Docs")
     else:
-        st.error(f"Risk Score: {risk_score}/100 — ⚠️ High Risk – Needs Supporting Docs / Investigation")
+        st.error(f"Risk Score: {risk_score}/100 — 🚨 High Risk – Recommend for Further Investigation")
 
     st.subheader("🔍 Prediction")
     if pred == 1:
-        st.error(f"⚠️ This claim is predicted to be **FRAUDULENT** with {prob*100:.2f}% confidence.")
+        st.error(f"🚨 This claim is predicted to be **FRAUDULENT** with {prob*100:.2f}% confidence.")
     else:
         st.success(f"✅ This claim is predicted to be **LEGITIMATE** with {(1 - prob)*100:.2f}% confidence.")
 
