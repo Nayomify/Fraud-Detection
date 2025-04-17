@@ -100,9 +100,9 @@ if submitted:
     # === RISK & RESULT DISPLAY ===
 if risk_score <= 40:
         st.success(f"Risk Score: {risk_score}/100 — ✅ Low Risk – Recommend Claim Payout")
-    elif risk_score <= 70:
+elif risk_score <= 70:
         st.success(f"Risk Score: {risk_score}/100 — ⚠️ Medium Risk – Request Supporting Docs")
-    else:
+else:
         st.error(f"Risk Score: {risk_score}/100 — 🚨 High Risk – Recommend for Further Investigation")
 
         st.subheader("🔍 Prediction")
