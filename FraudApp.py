@@ -43,18 +43,22 @@ top_20_features = [
 # Set page configuration
 # Set wide layout
 # Page setup
+# Page config
 st.set_page_config(page_title="ClaimShield", layout="wide")
 
-# Create layout
+# Custom layout for logo and title
 col1, col2 = st.columns([1.5, 6])
 
 with col1:
     st.image("CS.png", width=300)
 
 with col2:
-    # Adjust top margin to align vertically with the logo
     st.markdown(
-        "<h1 style='line-height: 300px; margin: 0;'>Auto Insurance Fraud Predictor</h1>",
+        """
+        <div style="display: flex; align-items: center; height: 100%;">
+            <h1 style='margin: 0;'>Auto Insurance Fraud Predictor</h1>
+        </div>
+        """,
         unsafe_allow_html=True
     )
 # === INPUT FORM IN 3 COLUMNS ===
