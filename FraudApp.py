@@ -42,32 +42,24 @@ top_20_features = [
 # === APP UI ===
 # Set page configuration
 # Set wide layout
+# Page setup
 st.set_page_config(page_title="ClaimShield", layout="wide")
 
-# Use columns to split layout
+# Create layout
 col1, col2 = st.columns([1.5, 6])
 
 with col1:
-    st.markdown(
-        """
-        <div style="display: flex; align-items: center; height: 100%;">
-            <img src="https://raw.githubusercontent.com/your-repo/CS.png" width="300">
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.image("CS.png", width=300)
 
 with col2:
+    # Adjust top margin to align vertically with the logo
     st.markdown(
-        """
-        <div style="display: flex; align-items: center; height: 100%;">
-            <h1 style="margin: 0;">Auto Insurance Fraud Predictor</h1>
-        </div>
-        """,
+        "<h1 style='line-height: 300px; margin: 0;'>Auto Insurance Fraud Predictor</h1>",
         unsafe_allow_html=True
     )
-# Intro text
 
+# Optional description
+st.markdown("Enter claim details to receive a **fraud prediction**.")
 
 # === INPUT FORM IN 3 COLUMNS ===
 with st.form("fraud_form"):
