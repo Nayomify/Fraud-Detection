@@ -107,11 +107,11 @@ if submitted:
 
     st.subheader("🔍 Prediction")
    
-if risk_score <= 40:
-    st.success(f"✅ This claim is predicted to be **LEGITIMATE** with {(1 - prob)*100:.2f}% confidence.")
-else:
-    st.warning(f"⚠️ This claim is **POTENTIALLY FRAUDULENT** with a risk score of {risk_score}. \n\n📄 Further investigation or supporting documents are recommended.")
-
+  if pred == 1:
+        st.error(f"🚨 This claim is predicted to be **FRAUDULENT** with {prob*100:.2f}% confidence.")
+    else:
+        st.success(f"✅ This claim is predicted to be **LEGITIMATE** with {(1 - prob)*100:.2f}% confidence.")
+        
     # === SHAP EXPLANATION ===
     st.markdown("---")
     st.subheader("🧠 SHAP Explanation – Why this prediction?")
