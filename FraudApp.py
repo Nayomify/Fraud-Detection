@@ -98,14 +98,14 @@ if submitted:
     risk_score = int(prob * 100)
 
     # === RISK & RESULT DISPLAY ===
-if risk_score <= 40:
+    if risk_score <= 50:
         st.success(f"Risk Score: {risk_score}/100 — ✅ Low Risk – Recommend Claim Payout")
-elif risk_score <= 70:
+    elif risk_score <= 70:
         st.success(f"Risk Score: {risk_score}/100 — ⚠️ Medium Risk – Request Supporting Docs")
-else:
-        st.error(f"Risk Score: {risk_score}/100 — 🚨 High Risk – Recommend for Further Investigation")
+    else:
+        st.error(f"Risk Score: {risk_score}/100 — ⚠️ High Risk – Needs Supporting Docs / Investigation")
 
-       st.subheader("🔍 Prediction")
+    st.subheader("🔍 Prediction")
     if pred == 1:
         st.error(f"⚠️ This claim is predicted to be **FRAUDULENT** with {prob*100:.2f}% confidence.")
     else:
@@ -130,4 +130,4 @@ else:
 
     for i, (feat, val) in enumerate(sorted_impact[:5], 1):
         direction = "increases" if val > 0 else "decreases"
-        st.write(f"**{i}.** `{feat}` {direction} the likelihood of fraud (impact: {val:+.4f})")
+        st.write(f"**{i}.** `{feat}` {direction} the likelihood of fraud (impact: {val:+.4f})")# === RISK & RESULT DISPLAY ===
