@@ -105,7 +105,7 @@ if submitted:
     else:
         st.error(f"Risk Score: {risk_score}/100 — 🚨 High Risk – Recommend for Further Investigation")
 
-    st.subheader("🔍 Prediction")
+        st.subheader("🔍 Prediction")
    
   if pred == 1:
         st.error(f"🚨 This claim is predicted to be **FRAUDULENT** with {prob*100:.2f}% confidence.")
