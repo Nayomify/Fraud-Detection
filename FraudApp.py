@@ -40,8 +40,19 @@ top_20_features = [
 ]
 
 # === APP UI ===
+# Set page configuration
 st.set_page_config(page_title="ClaimShield", layout="wide")
-st.title("CS.png" "Auto Insurance Fraud Predictor")
+
+# Layout with logo and title on the same line
+col1, col2 = st.columns([1, 6])
+
+with col1:
+    st.image("CS.png", width=60)  # Keeps logo small
+
+with col2:
+    st.markdown("<h1 style='padding-top: 10px;'>Auto Insurance Fraud Predictor</h1>", unsafe_allow_html=True)
+
+# Intro text
 st.markdown("Enter claim details to receive a **fraud prediction**.")
 
 # === INPUT FORM IN 3 COLUMNS ===
