@@ -107,9 +107,9 @@ else:
 
         st.subheader("🔍 Prediction")
    
-  if pred == 1:
+if pred == 1:
         st.error(f"🚨 This claim is predicted to be **FRAUDULENT** with {prob*100:.2f}% confidence.")
-    else:
+else:
         st.success(f"✅ This claim is predicted to be **LEGITIMATE** with {(1 - prob)*100:.2f}% confidence.")
         
     # === SHAP EXPLANATION ===
