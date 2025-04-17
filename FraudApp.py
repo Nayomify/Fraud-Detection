@@ -105,16 +105,15 @@ elif risk_score <= 70:
 else:
         st.error(f"Risk Score: {risk_score}/100 — 🚨 High Risk – Recommend for Further Investigation")
 
-        st.subheader("🔍 Prediction")
-   
-if pred == 1:
-        st.error(f"🚨 This claim is predicted to be **FRAUDULENT** with {prob*100:.2f}% confidence.")
-else:
+       st.subheader("🔍 Prediction")
+    if pred == 1:
+        st.error(f"⚠️ This claim is predicted to be **FRAUDULENT** with {prob*100:.2f}% confidence.")
+    else:
         st.success(f"✅ This claim is predicted to be **LEGITIMATE** with {(1 - prob)*100:.2f}% confidence.")
-        
+
     # === SHAP EXPLANATION ===
-        st.markdown("---")
-        st.subheader("🧠 SHAP Explanation – Why this prediction?")
+    st.markdown("---")
+    st.subheader("🧠 SHAP Explanation – Why this prediction?")
 
     shap_values = explainer(input_scaled)
 
