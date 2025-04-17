@@ -113,8 +113,8 @@ else:
         st.success(f"✅ This claim is predicted to be **LEGITIMATE** with {(1 - prob)*100:.2f}% confidence.")
         
     # === SHAP EXPLANATION ===
-    st.markdown("---")
-    st.subheader("🧠 SHAP Explanation – Why this prediction?")
+        st.markdown("---")
+        st.subheader("🧠 SHAP Explanation – Why this prediction?")
 
     shap_values = explainer(input_scaled)
 
