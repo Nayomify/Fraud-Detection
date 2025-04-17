@@ -47,7 +47,7 @@ st.set_page_config(page_title="ClaimShield", layout="wide")
 col1, col2 = st.columns([1, 6])
 
 with col1:
-    st.image("CS.png", width=60)  # Keeps logo small
+    st.image("CS.png", width=200)  # Keeps logo small
 
 with col2:
     st.markdown("<h1 style='padding-top: 10px;'>Auto Insurance Fraud Predictor</h1>", unsafe_allow_html=True)
