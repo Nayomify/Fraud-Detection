@@ -57,8 +57,6 @@ with col2:
         "<h1 style='line-height: 300px; margin: 0;'>Auto Insurance Fraud Predictor</h1>",
         unsafe_allow_html=True
     )
-st.markdown("Enter claim details to receive a **fraud prediction**.")
-
 # === INPUT FORM IN 3 COLUMNS ===
 with st.form("fraud_form"):
     st.markdown("Enter claim details to receive a **fraud prediction**.")
