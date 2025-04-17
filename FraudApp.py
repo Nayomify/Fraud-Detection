@@ -98,7 +98,7 @@ if submitted:
     risk_score = int(prob * 100)
 
     # === RISK & RESULT DISPLAY ===
-    if risk_score <= 40:
+if risk_score <= 40:
         st.success(f"Risk Score: {risk_score}/100 — ✅ Low Risk – Recommend Claim Payout")
     elif risk_score <= 70:
         st.success(f"Risk Score: {risk_score}/100 — ⚠️ Medium Risk – Request Supporting Docs")
