@@ -17,7 +17,7 @@ with open("shap_explainer_top20.pkl", "rb") as f:
 
 # === DEFINE TOP 20 FEATURES USED ===
 top_20_features = [
-    'total_claim_payout',
+    'Total_claim_payout',
     'Total_Claim_Amount',
     'Repair Cost Estimate',
     'Number of Previous Claims',
